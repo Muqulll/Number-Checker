@@ -1,0 +1,1 @@
+# a_weird_non_begginer_friendly_js_greeter_lol
