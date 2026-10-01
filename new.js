@@ -1,15 +1,37 @@
-function formatName(firstName, lastname) {
-  return `${firstName} ${lastname}`;
+function  isPositive(number){
+        if (number > 0){
+            return `positive: true`;
+        }
+        return 'positive: false';
 }
 
-function getGreeting(timeOfDay) {
-  return `Good ${timeOfDay}`;
+function  isNegative(number){
+        if (number < 0){
+            return `negative: true`;
+        }
+        return 'negative: false';
 }
 
-function createGreeting(firstName, lastname, timeOfDay) {
-  return `${getGreeting(timeOfDay)}, ${formatName(firstName,lastname)}`
+function  isZero(number){
+        if (number === 0){
+            return `zero: true`;
+        }
+        return 'zero: false';
 }
 
-console.log(createGreeting("Ava", "Stone", "morning"));
-console.log(createGreeting("Noah", "Kim", "evening"));
-console.log(createGreeting("Mina", "Patel", "afternoon"));
+
+function  isEven(number){
+        if (number % 2 === 0){
+            return `even: true, odd: false`;
+        }
+        return 'even: false, odd: true';
+}
+
+function  describeNumber(number){
+        return `{ ${isPositive(number)}, ${isNegative(number)}, ${isZero(number)}, ${isEven(number)} }`
+}
+
+console.log(describeNumber(8));
+console.log(describeNumber(-3));
+console.log(describeNumber(0));
+console.log(describeNumber(7));
